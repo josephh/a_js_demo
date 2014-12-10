@@ -22,18 +22,30 @@
     
     var gems = [
         {
-          name : 'Diamond',
-          price : '2.95',
-          description : 'some description',
-          canPurchase : true,
-          soldOut : false
+          name: 'Diamond',
+          price: '2',
+          description: 'some description',
+          canPurchase: true,
+          soldOut: false,
+          images[ // images array
+          { //new object
+              full:'',
+              thumb:''
+          }
+          ]
         },
         {
           name : 'Emerald',
           price : '3.21',
           description : 'further description',
           canPurchase : true,
-          soldOut : false
+          soldOut : false,
+          images[ // images array
+          { //new object
+              full:'',
+              thumb:''
+          }
+          ]
         },
         
     ];

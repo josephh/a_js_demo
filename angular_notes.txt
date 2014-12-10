@@ -1,0 +1,25 @@
+.......
+
+Angular provides 'filters' to help with things like formatting and conversion to common representations, like showing a number as a currency value.
+Formatting with filters follows this syntactic pattern,
+{{data* | filter:options*}}
+e.g.
+// date
+{{'15868459666235' | date:'MM/dd/yyyy @ h:mma}}
+
+// capitalisation
+{{'octagon hall' | uppercase}}
+
+// limit cardinality
+{{'Quite a long Character String' | limitTo:8}} // for strings
+<li ng-repeat='product in store.products | limitTo:3'> // for arrays (note quote syntax)
+
+// ordering
+ // price in descending order
+<li ng-repeat="product in store.products | orderBy:'-price'"> // for arrays (note quote syntax)
+
+
+IMAGES
+------
+These get added to an object in the controller.  However we can't add those directly to a image element like this <img src="{{}}product.images[0].full}}">  because the browser tries to load the image before the expression is evaluated. Instead we need the ng-src directive, e.g. 
+<img ng-src="{{}}product.images[0].full}}">
